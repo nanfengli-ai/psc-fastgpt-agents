@@ -1,0 +1,19 @@
+services:
+  agent-gateway:
+    build:
+      context: ./services/agent-gateway
+    env_file: .env
+    ports:
+      - "${AGENT_GATEWAY_PORT:-8080}:8080"
+    restart: unless-stopped
+
+  api-file-library:
+    build:
+      context: ./services/api-file-library
+    env_file: .env
+    ports:
+      - "${FILE_LIBRARY_PORT:-8081}:8081"
+    volumes:
+      # Mount your doc directory into the container (example)
+      - ./data/psc-docs:/app/data/psc-docs
+    restart: unless-stopped
