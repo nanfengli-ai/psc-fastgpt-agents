@@ -1,4 +1,4 @@
-# PSC FastGPT Agents (Tianjin Maritime Bureau)
+# PSC FastGPT Agents
 
 本仓库提供两个基于 **FastGPT** 平台的 PSC（Port State Control）智能体工程化落地脚手架：
 
